@@ -17,7 +17,7 @@ public class ConnectionWithServer {
         try {
             socket = new Socket("localhost", 8189);
             outcomingStream = new ObjectEncoderOutputStream(socket.getOutputStream());
-            incomingStream = new ObjectDecoderInputStream(socket.getInputStream(), 30000000);
+            incomingStream = new ObjectDecoderInputStream(socket.getInputStream(), 20971520);
         } catch (IOException e) {
             e.printStackTrace();
         }
